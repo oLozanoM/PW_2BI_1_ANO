@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="mearch heart">
+    <meta name="keywords" content="Heart Merch">
+    <meta name="author" content="Gustavo Neris, Lucas Lozzano">
+    <link rel="icon" type="image/x-icon" href="img\images.ico">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <title>CBJR</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&display=swap" rel="stylesheet">
+</head>
+
+<style>
+    .titulo-artistas {
+        font-size: 30px;
+    }
+</style>
+
+<body >
+    
+   <nav class="navbar navbar-expand-lg bg-body-tertiary ">
+        <div class="container-fluid">
+            <img class="imagemicone" src="img/icone.png" alt="Icone da Heart MerchS" width="96px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-start" id="navbarNav">
+                <ul class="navbar-nav pp">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="camisetas.html">Camisetas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="discos.html">Discos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="empresas.html">Para empresas</a>
+                    </li>
+                </ul>
+            </div>
+            <i class="bi bi-cart ms-2"></i>
+        </div>
+    </nav>
+
+    <nav class="breadcrumb-ml" style="--bs-breadcrumb-divider: url(&#34;data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='8'%3E%3Cpath d='M2.5 0L1 1.5 3.5 4 1 6.5 2.5 8l4-4-4-4z' fill='%236c757d'/%3E%3C/svg%3E&#34;);" aria-label="breadcrumb">
+      <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a class="link" href="index.html">Home</a></li>
+            <li class="breadcrumb-item"><a class="link"href="cbjr.html">CBJR</a></li>
+            <li class="breadcrumb-item active" aria-current="page">CD</li>
+        </ol>
+    </nav>
+
+
+    <article>
+        
+        <div class="container py-5">
+        <div class="row g-4">
+            
+            <div class="col-md-6 text-center">
+            <img src="img/6124GC090GL._UF1000,1000_QL80_.jpg" alt="Camiseta Linkin Park Preta" class="produto-img img-fluid shadow">
+            </div>
+
+            <div class="col-md-6">
+            <h2 class="fw-bold">Charlie Brown Jr Imunidade Musical CD</h2>
+            <p class="text-muted">Heart Merch</p>
+            <h3 class="text-dark fw-bold">R$ 169,99</h3>
+            <p class="small text-muted">Frete calculado no checkout.</p>
+
+            <button id="btnDescricao" class="btn btn-outline-secondary mb-3">
+                Ver descrição
+            </button>
+
+            <div id="descricaoProduto" class="card card-body collapse">
+                <h5 class="card-title">Descrição do Produto</h5>
+                <p class="card-text">
+                CD album Imunidade Musical Charlie Brown Jr Rock <br><br>
+                </p>
+            </div>
+            
+            <h5 class="mt-4">Quantidade</h5>
+            <div class="input-group" style="width: 140px;">
+                <button class="btn btn-outline-dark" id="menos">-</button>
+                <input type="number" id="quantidade" class="form-control text-center" value="1" min="1">
+                <button class="btn btn-outline-dark" id="mais">+</button>
+            </div>
+
+            
+            <button class="btn btn-dark btn-lg mt-4 w-100"><a href="form.html" style="text-decoration: none; color: white;">Adicionar ao carrinho</a></button>
+            </div>
+        </div>
+        </div>
+
+        <script>
+       
+            document.querySelectorAll('.opcao button').forEach(btn => {
+                btn.addEventListener('click', function() {
+                let grupo = this.parentNode.querySelectorAll('button');
+                grupo.forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+                });
+            });
+
+           
+            const menos = document.getElementById('menos');
+            const mais = document.getElementById('mais');
+            const qtd = document.getElementById('quantidade');
+
+            menos.addEventListener('click', () => {
+                let valor = parseInt(qtd.value);
+                if (valor > 1) qtd.value = valor - 1;
+            });
+
+            mais.addEventListener('click', () => {
+                let valor = parseInt(qtd.value);
+                qtd.value = valor + 1;
+            });
+            const btn = document.getElementById('btnDescricao');
+            const descricao = document.getElementById('descricaoProduto');
+
+            btn.addEventListener('click', () => {
+                if (descricao.classList.contains('show')) {
+                
+                const collapse = bootstrap.Collapse.getInstance(descricao);
+                collapse.hide();
+                } else {
+               
+                const collapse = new bootstrap.Collapse(descricao, {toggle: true});
+                }
+            });
+
+           
+            descricao.addEventListener('shown.bs.collapse', () => {
+                btn.textContent = 'Ocultar descrição';
+            });
+
+            descricao.addEventListener('hidden.bs.collapse', () => {
+                btn.textContent = 'Ver descrição';
+            });
+        </script>
+
+    </article>
+
+    <footer class="bg-light text-dark pt-5 pb-4">
+        <div class="container">
+            <div class="row justify-content-between">
+            
+                <div class="col-lg-4 col-md-6">
+                    
+                    <p class="mt-3">
+                    A Heart Merch nasceu em 2015 para fazer produtos para artistas e selos musicais.
+                    Todos que estão conosco têm ou tiveram banda, vão a shows e literalmente vestem
+                    nossa camisa, no trabalho e no dia a dia. Trabalhamos com merchandise oficial,
+                    licenciamento e private label.
+                    </p>
+                    
+                    <h6 class="fw-bold mt-4">Receba novidades e promoções</h6>
+                    <form class="d-flex">
+                    <input type="email" class="form-control me-2" placeholder="E-mail">
+                    <button type="submit" class="btn btn-outline-dark">→</button>
+                    </form>
+                </div>
+
+                <div class="col-lg-4 col-md-12">
+                    <h6 class="fw-bold">Contato</h6>
+                    <p class="mb-1"><strong>WhatsApp:</strong> 
+                    <a href="https://wa.me/5511934022014" class="text-warning text-decoration-none">11 93402–2014</a>
+                    </p>
+                    <p class="mb-3"><strong>E-mail:</strong> 
+                    <a href="mailto:contato@heartmerch.com.br" class="text-warning text-decoration-none">contato@heartmerch.com.br</a>
+                    </p>
+
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="https://www.facebook.com/HeartMerchOficial" class="text-dark fs-5"><i class="bi bi-facebook"></i></a>
+                        <a href="https://www.instagram.com/heart_merch/" class="text-dark fs-5"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.youtube.com/@HeartMerch" class="text-dark fs-5"><i class="bi bi-youtube"></i></a>
+                        <a href="https://www.tiktok.com/@heartmerch" class="text-dark fs-5"><i class="bi bi-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/SmoothScroll.js"></script>
+
+
+</body>
+
+</html>
