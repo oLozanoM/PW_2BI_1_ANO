@@ -1,0 +1,170 @@
+@media screen and (max-width: 800px) {
+  .left, .main, .right {
+    width: 100%;
+  }
+}
+
+@font-face {
+  font-family: Poppins-Black;
+  src: url(newpast/fontes/Poppins-Black.ttf);
+}
+
+@font-face {
+  font-family: Poppins-Medium;
+  src: url(newpast/fontes/Poppins-Medium.ttf);
+}
+
+.h1-1 {
+  font-family: sans-serif;
+  margin-top: 1.9%;
+  margin-left: 1.83%;
+  display: flex;
+  align-items: center;
+  font-size: 165%;
+}
+
+.h1-1::after {
+  content: "";
+  flex: 1;
+  height: 2px; 
+  background: black; 
+  margin-left: 15px; 
+  margin-right: 40px;
+  background-color: rgb(137, 137, 137);
+}
+
+.imagemicone {
+  transform: rotate(90);
+  
+}
+
+.breadcrumb-ml {
+  margin-top: 10px;
+  margin-left: 16px;
+}
+
+
+.link {
+  text-decoration: none;
+  color: black;
+}
+
+.logos {
+    display: flex;
+    gap: 35px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 20px;
+    margin-top: 1.7%;
+}
+
+.imga {
+    width: 90px;
+    height: 90px;
+    object-fit: contain;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    padding: 2px;
+    background: white;
+}
+
+  .product-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    overflow: hidden; 
+  }
+
+  .product-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+  }
+
+  .product-card img {
+    transition: transform 0.3s ease;
+  }
+
+  .product-card:hover img {
+    transform: scale(1.05);
+  }
+
+  .titulo-artistas {
+    font-size: 17px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    margin-left: 120px;
+    margin-top: 30px;
+  }
+
+  .titulo-artistas::after {
+    content: "";
+    flex: 1;
+    height: 2px; 
+    background: rgb(48, 48, 48);
+    margin-right: 118px; 
+    margin-left: 20px;
+  }
+
+  .pp {
+    margin-left: 2%;
+  }
+
+  body {
+      background-color: #f8f9fa;
+    }
+    .produto-img {
+      width: 100%;
+      border-radius: 10px;
+    }
+    .opcao button.active {
+      background-color: black;
+      color: white;
+    }
+
+  footer {
+    background-color: #f8f9fa;
+    height: 500px;
+  }
+
+  .iconefooter {
+    margin-left: 3%;
+    margin-top: 2%;
+  }
+
+  .justify {
+    text-align: justify;
+    margin-left: 3%;
+    margin-right: 73%;
+    margin-top: 2%;
+  }
+
+  .contat {
+    
+    margin-left: 75%;
+    font-size: 22px;
+  }
+
+  .contat2 {
+   
+    margin-left: 75%;
+ 
+  }
+
+  .link2 {
+    text-decoration: none;
+    color: rgb(171, 123, 177);
+    margin-top: -1%;
+    margin-left: 80%;
+  }
+
+.bi {
+  margin-right: 3% !important;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+article {
+  height: 80%;
+}
